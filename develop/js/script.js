@@ -53,7 +53,7 @@ function getMovie() {
   var tv = "tv_series";
 
   var watchKey = "GHWA9Jkmbwm8azDdX0w8d8YYB3Omku0yVowWVtgD";
-  var watchMode = `https://api.watchmode.com/v1/list-titles/?apiKey=${watchKey}&source_ids=&genres=${action}&types=${movie}}`;
+  var watchMode = `https://api.watchmode.com/v1/list-titles/?apiKey=${watchKey}&source_ids=&genres=${soap}&types=${tv}}`;
   console.log(watchMode);
   // Use a fetch call to get data from first api and return data we will use to find a movie for the User
   fetch(watchMode)
@@ -71,7 +71,7 @@ function getMovie() {
       console.log(total);
       var aNumber = Math.floor(Math.random() * total);
       console.log(aNumber);
-      var selection = data.titles[aNumber].imdb_id;
+      var selection = data.titles[aNumber].tmdb_id;
       var type = data.titles[aNumber].tmdb_type;
       console.log(selection);
       console.log(type);
@@ -88,6 +88,7 @@ function getMovie() {
     var tmdbKey = "df5b060aa473758dc356cd7a2a5312f4";
     var movieId = "550";
     var tmdb = `https://api.themoviedb.org/3/${urType}/${urPick}?api_key=${tmdbKey}&language=en-US`;
+
     console.log(tmdb);
 
     fetch(tmdb)
@@ -101,8 +102,15 @@ function getMovie() {
       .then((result) => {
         console.log(result);
         var pick = result.title;
+        var pick1 = result.original_name;
+        var img = result.poster_path;
         console.log(pick);
         $("#choice").text("Here's your movie choice  " + pick);
+        $("#choice2").text("Here's your TV choice  " + pick1);
+        $("#choice3").attr(
+          "src",
+          "https://www.themoviedb.org/t/p/w600_and_h900_bestv2" + img
+        );
       });
   }
 }
