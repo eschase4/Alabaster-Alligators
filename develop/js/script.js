@@ -9,7 +9,11 @@ console.log("this works!");
 // API 2 OMDB, input randomly selected movie to get Plot and score.
 
 // if user has seen movie we re-run function to get another random movie
-
+$("#movie").click(function get(event) {
+  event.preventDefault();
+  console.log("you are searching for a movie!");
+  getMovie();
+});
 // Horror: Dark places and unexplained things like forests, graveyards, castles, abandoned structures or buildings, locked doors to remove rooms, blood, gore, or killing instruments.
 // Sci-Fi: Outer space or futuristic items like spaceships or laser guns
 // Sports: Sports arenas, teams, athletes, and sports equipment
@@ -22,22 +26,86 @@ console.log("this works!");
 // Musicals: singing and dancing
 // Romance: different stages of “falling in love” with a subsequent break-up and reconciliation, true love, fairy tales, forbidden love
 // Mystery
-$(function () {
+function getMovie() {
   // Watch Mode list titles api call to filter out movies from list Watch Mode
 
   var action = "1,39,2,19,18,41,";
+  var history = "31,10,";
+  var comedy = "4,";
+  var docu = "6,36,";
+  var reality = "34,28,22,23,26,35,";
+  var sports = "29,";
+  var family = "8,21,";
+  var fantasy = "9,";
+  var drama = "7,";
+  var horror = "11,";
+  var romance = "14,";
+  var thriller = "17,13,5,";
+  var animation = "3,";
+  var anime = "33,";
+  var supernatural = "37,";
+  var music = "12,32,";
+  var scifi = "40,15,";
+  var soap = "25,";
+  // Need to create algorithm or survey to choose which queries to put in our api Call.
+  // *content type (movie/tvSeries) must match query type. i.e(soap type = tv)
+  var movie = "movie";
+  var tv = "tv_series";
 
   var watchKey = "GHWA9Jkmbwm8azDdX0w8d8YYB3Omku0yVowWVtgD";
-  var watchMode = `https://api.watchmode.com/v1/list-titles/?apiKey=GHWA9Jkmbwm8azDdX0w8d8YYB3Omku0yVowWVtgD&source_ids=&genres=1,39,2,19,18,41,&types=movie`;
+  var watchMode = `https://api.watchmode.com/v1/list-titles/?apiKey=${watchKey}&source_ids=&genres=${action}&types=${movie}}`;
   console.log(watchMode);
-
+  // Use a fetch call to get data from first api and return data we will use to find a movie for the User
+  fetch(watchMode)
+    .then((response) => {
+      if (response.status === 200) {
+        return response.json();
+      } else {
+        throw new Error("Something went wrong on API server!");
+      }
+    })
+    .then((data) => {
+      //  grabbed data from fetch and put important and relevant datas into variables
+      console.log(data);
+      var total = data.titles.length;
+      console.log(total);
+      var aNumber = Math.floor(Math.random() * total);
+      console.log(aNumber);
+      var selection = data.titles[aNumber].imdb_id;
+      var type = data.titles[aNumber].tmdb_type;
+      console.log(selection);
+      console.log(type);
+      localStorage.setItem("movie", selection);
+      localStorage.setItem("showType", type);
+      yourChoice();
+    });
   //  TMDB api Call, uses IMDB id input to search for and find a move. Returns an Object with movie info inside
+  function yourChoice() {
+    var urPick = localStorage.getItem("movie");
+    console.log(urPick);
+    var urType = localStorage.getItem("showType");
+    var imdbId = "tt6443346";
+    var tmdbKey = "df5b060aa473758dc356cd7a2a5312f4";
+    var movieId = "550";
+    var tmdb = `https://api.themoviedb.org/3/${urType}/${urPick}?api_key=${tmdbKey}&language=en-US`;
+    console.log(tmdb);
 
-  var tmdbKey = "df5b060aa473758dc356cd7a2a5312f4";
-  var movieId = "tt14040910";
-  var tmdb = `https://api.themoviedb.org/3/movie/tt12262116?api_key=df5b060aa473758dc356cd7a2a5312f4&language=en-US`;
-  console.log(tmdb);
-});
+    fetch(tmdb)
+      .then((info) => {
+        if (info.status === 200) {
+          return info.json();
+        } else {
+          throw new Error("Something went wrong on API server!");
+        }
+      })
+      .then((result) => {
+        console.log(result);
+        var pick = result.title;
+        console.log(pick);
+        $("#choice").text("Here's your movie choice  " + pick);
+      });
+  }
+}
 
 // Do you want to watch something Cheesy
 // Are you in a mood to laugh
