@@ -1,18 +1,13 @@
 #title-container {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
     background-color: #2d5040;
     max-height: 33vh;
 }
 
 #title {
     position: absolute;
-    font-size: 63px;
     color: blanchedalmond;
-    font-weight: bold;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    margin-top: 27px;
+
 }
 
 #alabaster-alligator {
@@ -20,18 +15,7 @@
     width: 180px;
 }
 
-.subtitle {
-    margin-left: 132px;
-    color: black;
-    font-weight: bold;
-    font-size: 25px;
-}
-
-
 #main-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     background-color: blanchedalmond;
 }
 
@@ -49,33 +33,18 @@ transform-origin: left;
     transform-origin: right; 
 }
 
-#inner-container {
-    display: flex;
-    /* flex-direction:column; */
+#tv-set {
     background-color: saddlebrown;
-    margin-top: 220px;
-    /* min-height: 70vh; */
-    /* min-width: 100vh; */
+    min-height: 80vh;
+    max-width:125vh;
 }
 
-#side-tv {
-    display: flex;
-    flex-direction: column;
-}
-
-#tv-screen {
-    background-color: black;
-    padding: 212px;
-    margin: 50px 126px 100px -12px;
-    display: flex;
-    justify-content: center;
-}
 
 .answer-btn {
     height: 163px;
     width: 160px;
     border-radius: 50%;
-    font-size: 70px;
+    font-size: 100%;
     background-color: grey;
 }
 
