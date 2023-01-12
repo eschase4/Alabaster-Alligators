@@ -115,7 +115,7 @@ function getMovie() {
   }
 }
 
-$(function details() {
+function details() {
   var source = localStorage.getItem("movie");
   console.log(source);
   var secondCallKey = "GHWA9Jkmbwm8azDdX0w8d8YYB3Omku0yVowWVtgD";
@@ -132,7 +132,7 @@ $(function details() {
     .then((things) => {
       console.log(things);
     });
-});
+}
 
 // Do you want to watch something Cheesy
 // Are you in a mood to laugh
