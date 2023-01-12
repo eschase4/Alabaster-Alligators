@@ -118,6 +118,9 @@ const Quiz = [{
   ]}]
 
   function iterate() {
+   
+  // for (i = 0; i < Quiz.length; i++)
+
     questionSpace.text(Quiz[0].q)
   }
   iterate()
