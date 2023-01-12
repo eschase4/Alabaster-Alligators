@@ -54,8 +54,8 @@ transform-origin: left;
     /* flex-direction:column; */
     background-color: saddlebrown;
     margin-top: 220px;
-    min-height: 70vh;
-    min-width: 100vh;
+    /* min-height: 70vh; */
+    /* min-width: 100vh; */
 }
 
 #side-tv {
@@ -65,8 +65,10 @@ transform-origin: left;
 
 #tv-screen {
     background-color: black;
-    margin: 56px 38px 56px -38px;
-    max-width: 70vh;
+    padding: 212px;
+    margin: 50px 126px 100px -12px;
+    display: flex;
+    justify-content: center;
 }
 
 .answer-btn {
