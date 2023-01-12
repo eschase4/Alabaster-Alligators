@@ -10,7 +10,7 @@
     />
     <link rel="stylesheet" href="./develop/css/reset.css" />
     <link rel="stylesheet" href="./develop/css/style.css" />
-    
+
     <script
       src="https://kit.fontawesome.com/7c9d2b2756.js"
       crossorigin="anonymous"
@@ -18,31 +18,56 @@
     <title>What to Watch</title>
   </head>
   <body>
-   <section class="hero">
-  <div class="hero-body" id="title-container">
-      <img src="./develop/images/alabaster-alligator-logo.png" id="alabaster-alligator">
-      <div>
-        <h1 id="title">Ask Alabaster Alligator</h1>
-      
-      <p class="subtitle">
-        What should I watch?
-      </p>
+    <section class="hero">
+      <div class="hero-body" id="title-container">
+        <img
+          src="./develop/images/alabaster-alligator-logo.png"
+          id="alabaster-alligator"
+        />
+        <div>
+          <h1 id="title">Ask Alabaster Alligator</h1>
+
+          <p class="subtitle">What should I watch?</p>
+        </div>
+      </div>
+    </section>
+    <div>
+      <h1 id="question"></h1>
+      <button id="yes">Yes</button>
+      <button id="no">No</button>
     </div>
   </div>
-</section> 
-<div>
-      <h1 id="question"></h1>
-      <button id="yes" >Yes</button>
-      <button id="no">No</button>
+</section>
 
-    </div>
-    <p>CHECK THE CONSOLE LOG!</p>
-
+<div class="container is-widescreen">
+  <div class="notification" id="main-container">
+    <div id="diagonal-line-left"></div>
+    <div id="diagonal-line-right"></div>
+    <div class="container" id="inner-container">
+      <div class="column is-one-quarter" id="side-tv">
+The side of the tv
+<button class="answer-btn">Yes</button>
+<button class="answer-btn">No</button>
+      </div>
+      <div class="column is-three-quarters" id="tv-screen">
+    The tv screen
+</div>
+  </div>
+  </div>
+</div>
+<footer class="footer" id="footer">
+  <div class="content has-text-centered">
+    <p>
+      <strong>Movie and tv show data provided</strong> by <img src="./develop/images/TMDB-logo.svg" href="https://developers.themoviedb.org/3/getting-started/introduction" id="TMDB"><strong>and</strong>  <img src="./develop/images/watchmode-logo.png" href="https://api.watchmode.com/" id="watchmode">
+      
+    </p>
+  </div>
+</footer>
     <!-- <p>CHECK THE CONSOLE LOG!</p>
     <button id="movie">Get A Movie</button>
     <p id="choice"></p>
     <p id="choice2"></p>
-    <img id="choice3" src="" width="100px" height="100px" /> -->
+    <img id="choice3" src="" width="100px" height="100px" />
     <script
       src="https://code.jquery.com/jquery-3.6.3.min.js"
       integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU="
