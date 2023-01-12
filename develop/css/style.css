@@ -1,18 +1,18 @@
 #title-container {
-    display:flex;
+    display: flex;
     flex-direction: column;
     align-items: flex-start;
-    background-color:#2d5040;
+    background-color: #2d5040;
     max-height: 33vh;
 }
 
 #title {
     position: absolute;
     font-size: 63px;
-    color:blanchedalmond;
+    color: blanchedalmond;
     font-weight: bold;
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    margin-top:27px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-top: 27px;
 }
 
 #alabaster-alligator {
@@ -25,4 +25,65 @@
     color: black;
     font-weight: bold;
     font-size: 25px;
+}
+
+
+#main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: blanchedalmond;
+}
+
+#diagonal-line-left {
+border-bottom: 3px solid grey;
+width: 45%;
+transform: rotate(45deg);
+transform-origin: left;
+}
+
+#diagonal-line-right {
+    border-bottom: 3px solid grey;
+    width: 45%;
+    transform: rotate(-45deg);
+    transform-origin: right; 
+}
+
+#inner-container {
+    display: flex;
+    /* flex-direction:column; */
+    background-color: saddlebrown;
+    margin-top: 220px;
+    min-height: 70vh;
+    min-width: 100vh;
+}
+
+#side-tv {
+    display: flex;
+    flex-direction: column;
+}
+
+#tv-screen {
+    background-color: black;
+    margin: 56px 38px 56px -38px;
+    max-width: 70vh;
+}
+
+.answer-btn {
+    height: 163px;
+    width: 160px;
+    border-radius: 50%;
+    font-size: 70px;
+    background-color: grey;
+}
+
+#footer {
+    background-color:#2d5040;
+}
+#TMDB {
+    max-width: 7%;
+}
+
+#watchmode {
+    max-width: 10%;
 }
