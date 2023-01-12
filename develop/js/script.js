@@ -53,7 +53,7 @@ function getMovie() {
   var tv = "tv_series";
 
   var watchKey = "GHWA9Jkmbwm8azDdX0w8d8YYB3Omku0yVowWVtgD";
-  var watchMode = `https://api.watchmode.com/v1/list-titles/?apiKey=${watchKey}&source_ids=&genres=${soap}&types=${tv}}`;
+  var watchMode = `https://api.watchmode.com/v1/list-titles/?apiKey=${watchKey}&source_ids=&genres=${horror}&types=${movie}}`;
   console.log(watchMode);
   // Use a fetch call to get data from first api and return data we will use to find a movie for the User
   fetch(watchMode)
@@ -114,6 +114,25 @@ function getMovie() {
       });
   }
 }
+
+$(function details() {
+  var source = localStorage.getItem("movie");
+  console.log(source);
+  var secondCallKey = "GHWA9Jkmbwm8azDdX0w8d8YYB3Omku0yVowWVtgD";
+  var callDetail = `https://api.watchmode.com/v1/title/${3173903}/sources/?apiKey=${secondCallKey}&append_to_response=sources'`;
+
+  fetch(callDetail)
+    .then((stuff) => {
+      if (stuff.status === 200) {
+        return stuff.json();
+      } else {
+        throw new Error("Something went wrong on API server!");
+      }
+    })
+    .then((things) => {
+      console.log(things);
+    });
+});
 
 // Do you want to watch something Cheesy
 // Are you in a mood to laugh
