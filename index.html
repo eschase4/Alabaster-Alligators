@@ -19,38 +19,39 @@
   </head>
   <body>
     <section class="hero">
-      <div class="hero-body" id="title-container">
+      <div class="hero-body is-flex is-flex-direction-column is-align-items-start" id="title-container">
         <img
           src="./develop/images/alabaster-alligator-logo.png"
           id="alabaster-alligator"
         />
         <div>
-          <h1 id="title">Ask Alabaster Alligator</h1>
+          <h1 class="mt-6 has-text-weight-bold is-size-1" id="title">Ask Alabaster Alligator</h1>
 
-          <p class="subtitle">What should I watch?</p>
+          <p class="subtitle ml-6 pl-6 mb-1 has-text-weight-bold is-size-2 has-text-black">What should I watch?</p>
         </div>
       </div>
     </section>
-    <div>
+    <!-- <div>
       <h1 id="question"></h1>
       <button id="yes">Yes</button>
       <button id="no">No</button>
     </div>
   </div>
-</section>
+</section> -->
 
-<div class="container is-widescreen">
-  <div class="notification" id="main-container">
+<div class="container is-fluid" id="main-container">
+  <div class="container is-flex is-flex-direction-column is-align-items-center is-fluid p-6">
     <div id="diagonal-line-left"></div>
     <div id="diagonal-line-right"></div>
-    <div class="container" id="inner-container">
-      <div class="column is-one-quarter" id="side-tv">
-The side of the tv
-<button class="answer-btn">Yes</button>
-<button class="answer-btn">No</button>
+    <div class="container is-flex m-6 p-6" id="tv-set">
+      <div class="column is-flex is-flex-direction-column is-align-items-center is-justify-content-space-evenly is-one-quarter" id="side-tv">
+
+<button class="answer-btn" id="yes-btn">Take the quiz</button>
+<button class="answer-btn" id="no-btn"></button>
       </div>
-      <div class="column is-three-quarters" id="tv-screen">
-    The tv screen
+      <div class="column is-flex is-justify-content-center is-align-items-center has-background-black m-6 is-one-half" id="tv-screen">
+   Do you need something to watch? Are you stuck endlessly scrolling through titles to find the perfect 
+   entertainment for you mood? Take the quiz to find out EXACTLY what you should watch!
 </div>
   </div>
   </div>
