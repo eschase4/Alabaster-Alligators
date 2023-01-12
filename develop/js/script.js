@@ -1,5 +1,97 @@
 console.log("this works!");
 
+
+const Quiz = {
+  id:0,
+  q: "Are you in the mood for something scary?",
+  a: [{text: "Yes", addGenre: horror},
+      {text: "No", addGenre: ""}
+  ],
+  id: 1,
+  q: "Do you want a little excitement?",
+  a: [{text: "Yes", addGenre: action},
+      {text: "No", addGenre: ""}
+  ],
+  id: 2,  
+  q: "Do you want to explore the past?",
+  a: [{text: "Yes", addGenre: history},
+      {text: "No", addGenre: ""}
+  ],
+  id: 3,  
+  q: "Do you want to laugh?",
+  a: [{text: "Yes", addGenre: comedy},
+      {text: "No", addGenre: ""}
+  ],
+  id: 4,  
+  q: "Are you in the mood to learn?",
+  a: [{text: "Yes", addGenre: documentary},
+      {text: "No", addGenre: ""}
+  ],
+  id: 5,  
+  q: "Do you want to see the world a little bit closer?",
+  a: [{text: "Yes", addGenre: reality},
+      {text: "No", addGenre: ""}
+  ],
+  id: 6,  
+  q: "Do you need inspiration?",
+  a: [{text: "Yes", addGenre: sports},
+      {text: "No", addGenre: ""}
+  ],
+  id: 7,  
+  q: "Do you want/need something family friendly?",
+  a: [{text: "Yes", addGenre: family},
+      {text: "No", addGenre: ""}
+  ],
+  id: 8,  
+  q: "Elves?",
+  a: [{text: "Yes", addGenre: fantasy},
+      {text: "No", addGenre: ""}
+  ],
+  id: 9,  
+  q: "Are you ready to be on the edge of your seat?",
+  a: [{text: "Yes", addGenre: thriller},
+      {text: "No", addGenre: ""}
+  ],
+  id: 10,  
+  q: "Are you ready for a roller-coaster of emotions?",
+  a: [{text: "Yes", addGenre: drama},
+      {text: "No", addGenre: ""}
+  ],
+  id: 11,  
+  q: "Do you want something animated (japenese style)?",
+  a: [{text: "Yes", addGenre: anime},
+      {text: "No", addGenre: ""}
+  ],
+  id: 12,  
+  q: "Do you want to have your heart strings tugged?",
+  a: [{text: "Yes", addGenre: romance},
+      {text: "No", addGenre: ""}
+  ],
+  id: 13,  
+  q: "Are you ready to get spooked by spoopy ghosts?",
+  a: [{text: "Yes", addGenre: supernatural},
+      {text: "No", addGenre: ""}
+  ],
+  id: 14,  
+  q: "Wanna sing and dance",
+  a: [{text: "Yes", addGenre: music},
+      {text: "No", addGenre: ""}
+  ],
+  id: 15,  
+  q: "Want to watch a cheesy TV show?",
+  a: [{text: "Yes", addGenre: soap},
+      {text: "No", addGenre: ""}
+  ],
+  id: 16,  
+  q: "Do you want to step outside of reality?",
+  a: [{text: "Yes", addGenre: scifi},
+      {text: "No", addGenre: ""}
+  ],
+  id: 17,  
+  q: "Do prefer drawings over people?",
+  a: [{text: "Yes", addGenre: comedy},
+      {text: "No", addGenre: ""}
+  ]}
 // genres, length, format(tv/movie),
 
 // draft short survey to determine which genre to select.
