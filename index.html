@@ -19,57 +19,76 @@
   </head>
   <body>
     <section class="hero">
-      <div class="hero-body is-flex is-flex-direction-column is-align-items-start" id="title-container">
+      <div
+        class="hero-body is-flex is-flex-direction-column is-align-items-start"
+        id="title-container"
+      >
         <img
           src="./develop/images/alabaster-alligator-logo.png"
           id="alabaster-alligator"
         />
         <div>
-          <h1 class="mt-6 has-text-weight-bold is-size-1" id="title">Ask Alabaster Alligator</h1>
+          <h1 class="mt-6 has-text-weight-bold is-size-1" id="title">
+            Ask Alabaster Alligator
+          </h1>
 
-          <p class="subtitle ml-6 pl-6 mb-1 has-text-weight-bold is-size-2 has-text-black">What should I watch?</p>
+          <p
+            class="subtitle ml-6 pl-6 mb-1 has-text-weight-bold is-size-2 has-text-black"
+          >
+            What should I watch?
+          </p>
         </div>
       </div>
     </section>
-    <!-- <div>
-      <h1 id="question"></h1>
-      <button id="yes">Yes</button>
-      <button id="no">No</button>
-    </div>
-  </div>
-</section> -->
 
-<div class="container is-fluid" id="main-container">
-  <div class="container is-flex is-flex-direction-column is-align-items-center is-fluid p-6">
-    <div id="diagonal-line-left"></div>
-    <div id="diagonal-line-right"></div>
-    <div class="container is-flex m-6 p-6" id="tv-set">
-      <div class="column is-flex is-flex-direction-column is-align-items-center is-justify-content-space-evenly is-one-quarter" id="side-tv">
-
-<button class="answer-btn" id="yes-btn">Take the quiz</button>
-<button class="answer-btn" id="no-btn"></button>
+    <div class="container is-fluid" id="main-container">
+      <div
+        class="container is-flex is-flex-direction-column is-align-items-center is-fluid p-6"
+      >
+        <div id="diagonal-line-left"></div>
+        <div id="diagonal-line-right"></div>
+        <div class="container is-flex m-6 p-6" id="tv-set">
+          <div
+            class="column is-flex is-flex-direction-column is-align-items-center is-justify-content-space-evenly is-one-quarter"
+            id="side-tv"
+          >
+            <button class="answer-btn" id="yes"></button>
+            <button class="answer-btn" id="no"></button>
+          </div>
+          <div
+            class="column is-flex is-justify-content-center is-align-items-center has-background-black m-6 is-one-half"
+            id="tv-screen"
+          >
+            Do you need something to watch? Are you stuck endlessly scrolling
+            through titles to find the perfect entertainment for you mood? Take
+            the quiz to find out EXACTLY what you should watch!
+            <button class="btn" id="start">Tap here to start!</button>
+          </div>
+        </div>
       </div>
-      <div class="column is-flex is-justify-content-center is-align-items-center has-background-black m-6 is-one-half" id="tv-screen">
-   Do you need something to watch? Are you stuck endlessly scrolling through titles to find the perfect 
-   entertainment for you mood? Take the quiz to find out EXACTLY what you should watch!
-</div>
-  </div>
-  </div>
-</div>
-<footer class="footer" id="footer">
-  <div class="content has-text-centered">
-    <p>
-      <strong>Movie and tv show data provided</strong> by <img src="./develop/images/TMDB-logo.svg" href="https://developers.themoviedb.org/3/getting-started/introduction" id="TMDB"><strong>and</strong>  <img src="./develop/images/watchmode-logo.png" href="https://api.watchmode.com/" id="watchmode">
-      
-    </p>
-  </div>
-</footer>
-    <!-- <p>CHECK THE CONSOLE LOG!</p>
+    </div>
     <button id="movie">Get A Movie</button>
     <p id="choice"></p>
     <p id="choice2"></p>
-    <img id="choice3" src="" width="100px" height="100px" /> -->
-    <script>
+    <img id="choice3" src="" width="100px" height="100px" />
+    <footer class="footer" id="footer">
+      <div class="content has-text-centered">
+        <p>
+          <strong>Movie and tv show data provided</strong> by
+          <img
+            src="./develop/images/TMDB-logo.svg"
+            href="https://developers.themoviedb.org/3/getting-started/introduction"
+            id="TMDB"
+          /><strong>and</strong>
+          <img
+            src="./develop/images/watchmode-logo.png"
+            href="https://api.watchmode.com/"
+            id="watchmode"
+          />
+        </p>
+      </div>
+    </footer>
+    <script
       src="https://code.jquery.com/jquery-3.6.3.min.js"
       integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU="
       crossorigin="anonymous"
