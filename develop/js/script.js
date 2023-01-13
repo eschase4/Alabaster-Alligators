@@ -120,7 +120,7 @@ function quiz() {
     },
     {
       id: 11,
-      q: "Do you want something animated (japenese style)?",
+      q: "Do you want something animated (Japanese style)?",
       a: [
         { text: "Yes", addGenre: "anime" },
         { text: "No", addGenre: "" },
@@ -178,21 +178,30 @@ function quiz() {
 
   function iterate() {
     var i = 0;
-    questionSpace.text(Quiz[i].q);
+    for (i = 0; i < Quiz.length; i++){
+      // $(".answer-btn").on("click", i);
+      questionSpace.text(Quiz[0].q);
+    
     $("#yes").text(yesBtn);
     $("#no").text(noBtn);
 
     $("#yes").on("click", function () {
-      var u = Quiz[i].a[0].addGenre;
+      
+      var u = Quiz[i - 1].a[0].addGenre;
+      
       console.log(u);
-      i++;
-      iterate();
+      questionSpace.text(Quiz[i].q);
+      selectedGenre.push(u)
+      console.log(selectedGenre)
+      i++
     });
     $("#no").on("click", function () {
-      i++;
+      
+      questionSpace.text(Quiz[i].q);
       console.log("you've selected no!");
+      i++
     });
-  }
+    }}
   iterate();
 }
 // Horror: Dark places and unexplained things like forests, graveyards, castles, abandoned structures or buildings, locked doors to remove rooms, blood, gore, or killing instruments.
