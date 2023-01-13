@@ -120,7 +120,7 @@ function quiz() {
     },
     {
       id: 11,
-      q: "Do you want something animated (Japanese style)?",
+      q: "Do you want something animated (japenese style)?",
       a: [
         { text: "Yes", addGenre: "anime" },
         { text: "No", addGenre: "" },
@@ -186,10 +186,12 @@ function askQuestion (Quiz) {
       
       checkGenre(Quiz[currentQuestion].a[0])
       console.log("yes!")
+      $("#tv-screen").text(Quiz[currentQuestion].q)
       })
     $("#no").on('click', function(){
       
       checkGenre(Quiz[currentQuestion].a[1])
+      $("#tv-screen").text(Quiz[currentQuestion].q)
       console.log("no!")
       
     })
