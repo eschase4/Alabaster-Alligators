@@ -1,5 +1,6 @@
 console.log("this works!");
 const selectedGenre = [];
+var currentQuestion = 0;
 
 // genres, length, format(tv/movie),
 
@@ -19,16 +20,15 @@ const selectedGenre = [];
 $("#start").click(function (event) {
   event.preventDefault();
   console.log("you have started the quiz!");
+   $("#tv-screen").text("");
+  $("#start").hide();
   quiz();
 });
 
 function quiz() {
-  $("#tv-screen").text("");
-  $("#start").hide();
-
-  var yesBtn = "Yes";
-  var noBtn = "No";
-  var questionSpace = $("#tv-screen");
+  // var yesBtn = "Yes";
+  // var noBtn = "No";
+  // var questionSpace = $("#tv-screen");
   const Quiz = [
     {
       id: 0,
@@ -175,35 +175,43 @@ function quiz() {
       ],
     },
   ];
-
-  function iterate() {
-    var i = 0;
-    for (i = 0; i < Quiz.length; i++){
-      // $(".answer-btn").on("click", i);
-      questionSpace.text(Quiz[0].q);
-    
-    $("#yes").text(yesBtn);
-    $("#no").text(noBtn);
-
-    $("#yes").on("click", function () {
-      
-      var u = Quiz[i - 1].a[0].addGenre;
-      
-      console.log(u);
-      questionSpace.text(Quiz[i].q);
-      selectedGenre.push(u)
-      console.log(selectedGenre)
-      i++
-    });
-    $("#no").on("click", function () {
-      
-      questionSpace.text(Quiz[i].q);
-      console.log("you've selected no!");
-      i++
-    });
-    }}
-  iterate();
+  askQuestion(Quiz)
 }
+  
+function askQuestion (Quiz) {
+    $("#tv-screen").text(Quiz[currentQuestion].q)
+    $('#yes').text("Yes")
+    $('#no').text("No")
+    $("#yes").on('click', function(){
+      
+      checkGenre(Quiz[currentQuestion].a[0])
+      console.log("yes!")
+      })
+    $("#no").on('click', function(){
+      
+      checkGenre(Quiz[currentQuestion].a[1])
+      console.log("no!")
+      
+    })
+  }
+    
+   function checkGenre (selectedOption) {
+    
+   
+    if ("Yes") {
+      selectedGenre.push(selectedOption.addGenre)
+      console.log(selectedGenre)
+     localStorage.setItem("selectedGenre", JSON.stringify(selectedGenre))
+    }
+     else if ("No") {
+    console.log(selectedGenre)
+    }
+   currentQuestion++ 
+}
+
+
+//
+// }
 // Horror: Dark places and unexplained things like forests, graveyards, castles, abandoned structures or buildings, locked doors to remove rooms, blood, gore, or killing instruments.
 // Sci-Fi: Outer space or futuristic items like spaceships or laser guns
 // Sports: Sports arenas, teams, athletes, and sports equipment
