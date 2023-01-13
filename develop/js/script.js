@@ -196,17 +196,23 @@ function askQuestion (Quiz) {
     })
   }
     
-   function checkGenre (selectedOption) {
-  if ("Yes") {
+function checkGenre (selectedOption) {
+  console.log(selectedOption);
+  console.log(typeof selectedOption);
+
+
+  if (selectedOption.text === "Yes") {
+      console.log("Valid Yes Input")
       selectedGenre.push(selectedOption.addGenre)
       console.log(selectedGenre)
-     localStorage.setItem("selectedGenre", JSON.stringify(selectedGenre))
+      localStorage.setItem("selectedGenre", JSON.stringify(selectedGenre))
     }
-     else if ("No") {
-    console.log(selectedGenre)
+  else {
+      console.log("Valid No Input")
+      console.log(selectedGenre)
     }
-   currentQuestion++ 
-moveOn()
+  currentQuestion++ 
+  moveOn()
 }
 
 function moveOn() {
@@ -256,9 +262,16 @@ function getMovie() {
   // Need to create algorithm or survey to choose which queries to put in our api Call.
   // *content type (movie/tvSeries) must match query type. i.e(soap type = tv)
 
+  // selectedGenre = ["horror", "comedy"];
+  // create a temp variable to hold the string data (number IDS)   --> for loop
+  // let tempArr = ["11, ", 4] .  --> Array.join() . - convert the arry into a string
+ // let urlInput = "11, 4, "
+  //will replace "horror" for example with another valid set of info
+  //we can add an if/else statement to decide what will be displayed. aka movie v. tv so one doesn't show up as undefined.
+
   var movie = "movie";
   var tv = "tv_series";
-  var container = addGenre;
+ // var container = addGenre;
   var watchKey = "GHWA9Jkmbwm8azDdX0w8d8YYB3Omku0yVowWVtgD";
   var watchMode = `https://api.watchmode.com/v1/list-titles/?apiKey=${watchKey}&source_ids=&genres=${action}&types=${movie}}`;
   console.log(watchMode);
