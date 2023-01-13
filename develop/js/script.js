@@ -21,7 +21,7 @@ var currentQuestion = 0;
 $("#start").click(function (event) {
   event.preventDefault();
   console.log("you have started the quiz!");
-   $("#tv-screen").text("");
+  $("#tv-screen").text("");
   $("#start").hide();
   quiz();
 });
@@ -176,51 +176,52 @@ function quiz() {
   ];
   askQuestion(Quiz)
 }
-  
-function askQuestion (Quiz) {
+
+function askQuestion(Quiz) {
+  console.log("running the quiz again")
+  if (currentQuestion < 17) {
     $("#tv-screen").text(Quiz[currentQuestion].q)
     $('#yes').text("Yes")
     $('#no').text("No")
-    $("#yes").on('click', function(){
-      
+    $("#yes").on('click', function () {
       checkGenre(Quiz[currentQuestion].a[0])
       console.log("yes!")
       $("#tv-screen").text(Quiz[currentQuestion].q)
-      })
-    $("#no").on('click', function(){
-      
+    })
+    $("#no").on('click', function () {
       checkGenre(Quiz[currentQuestion].a[1])
       $("#tv-screen").text(Quiz[currentQuestion].q)
       console.log("no!")
-      
     })
   }
-    
-function checkGenre (selectedOption) {
+  else {
+    getMovie()
+  }
+}
+
+function checkGenre(selectedOption) {
   console.log(selectedOption);
   console.log(typeof selectedOption);
-
+  $("#yes").off("click").one("click", function () {
+    console.log("hello")
+  })
+  $("#no").off("click").one("click", function () {
+    console.log("hello")
+  })
 
   if (selectedOption.text === "Yes") {
-      console.log("Valid Yes Input")
-      selectedGenre.push(selectedOption.addGenre)
-      console.log(selectedGenre)
-      localStorage.setItem("selectedGenre", JSON.stringify(selectedGenre))
-    }
+    console.log("Valid Yes Input")
+    selectedGenre.push(selectedOption.addGenre)
+    console.log(selectedGenre)
+    localStorage.setItem("selectedGenre", JSON.stringify(selectedGenre))
+  }
   else {
-      console.log("Valid No Input")
-      console.log(selectedGenre)
-    }
-  currentQuestion++ 
-  moveOn()
+    console.log("Valid No Input")
+    console.log(selectedGenre)
+  }
+  currentQuestion++
+  quiz()
 }
-
-function moveOn() {
-  if (currentQuestion === 18)
-  getMovie()
-}
-
-
 
 //
 // }
@@ -265,13 +266,13 @@ function getMovie() {
   // selectedGenre = ["horror", "comedy"];
   // create a temp variable to hold the string data (number IDS)   --> for loop
   // let tempArr = ["11, ", 4] .  --> Array.join() . - convert the arry into a string
- // let urlInput = "11, 4, "
+  // let urlInput = "11, 4, "
   //will replace "horror" for example with another valid set of info
   //we can add an if/else statement to decide what will be displayed. aka movie v. tv so one doesn't show up as undefined.
 
   var movie = "movie";
   var tv = "tv_series";
- // var container = addGenre;
+  // var container = addGenre;
   var watchKey = "GHWA9Jkmbwm8azDdX0w8d8YYB3Omku0yVowWVtgD";
   var watchMode = `https://api.watchmode.com/v1/list-titles/?apiKey=${watchKey}&source_ids=&genres=${action}&types=${movie}}`;
   console.log(watchMode);
