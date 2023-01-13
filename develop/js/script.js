@@ -1,6 +1,4 @@
-console.log("this works!");
-const selectedGenre = [];
-var currentQuestion = 0;
+
 
 // genres, length, format(tv/movie),
 
@@ -16,6 +14,9 @@ var currentQuestion = 0;
 //   console.log("you are searching for a movie!");
 //   getMovie();
 // });
+console.log("this works!");
+const selectedGenre = [];
+var currentQuestion = 0;
 
 $("#start").click(function (event) {
   event.preventDefault();
@@ -26,9 +27,7 @@ $("#start").click(function (event) {
 });
 
 function quiz() {
-  // var yesBtn = "Yes";
-  // var noBtn = "No";
-  // var questionSpace = $("#tv-screen");
+  console.log("Quiztime")
   const Quiz = [
     {
       id: 0,
@@ -198,9 +197,7 @@ function askQuestion (Quiz) {
   }
     
    function checkGenre (selectedOption) {
-    
-   
-    if ("Yes") {
+  if ("Yes") {
       selectedGenre.push(selectedOption.addGenre)
       console.log(selectedGenre)
      localStorage.setItem("selectedGenre", JSON.stringify(selectedGenre))
@@ -209,7 +206,14 @@ function askQuestion (Quiz) {
     console.log(selectedGenre)
     }
    currentQuestion++ 
+moveOn()
 }
+
+function moveOn() {
+  if (currentQuestion === 18)
+  getMovie()
+}
+
 
 
 //
@@ -227,6 +231,7 @@ function askQuestion (Quiz) {
 // Romance: different stages of “falling in love” with a subsequent break-up and reconciliation, true love, fairy tales, forbidden love
 // Mystery
 function getMovie() {
+  console.log("Get Movie!")
   // Watch Mode list titles api call to filter out movies from list Watch Mode
   var action = "1,39,2,19,18,41,";
   var history = "31,10,";
