@@ -39,6 +39,11 @@ transform-origin: left;
     max-width:125vh;
 }
 
+#tv-screen {
+    min-width: 70vh;
+    border-radius: 30px;
+}
+
 
 .answer-btn {
     height: 163px;
