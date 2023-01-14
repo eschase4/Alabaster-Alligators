@@ -255,7 +255,6 @@ function checkGenre(selectedOption) {
 function getMovie() {
   console.log("Get Movie!");
 
-  console.log("Get Movie!");
   // Watch Mode list titles api call to filter out movies from list Watch Mode
 
   var movie = "movie";
