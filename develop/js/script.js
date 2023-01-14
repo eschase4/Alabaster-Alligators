@@ -202,11 +202,12 @@ function askQuestion(Quiz) {
 function checkGenre(selectedOption) {
   console.log(selectedOption);
   console.log(typeof selectedOption);
+  // $("#tv-screen").text("")
   $("#yes").off("click").one("click", function () {
-    console.log("hello")
+    $("#tv-screen").text("")
   })
   $("#no").off("click").one("click", function () {
-    console.log("hello")
+    $("#tv-screen").text("")
   })
 
   if (selectedOption.text === "Yes") {
@@ -238,6 +239,7 @@ function checkGenre(selectedOption) {
 // Romance: different stages of “falling in love” with a subsequent break-up and reconciliation, true love, fairy tales, forbidden love
 // Mystery
 function getMovie() {
+ 
   console.log("Get Movie!")
   // Watch Mode list titles api call to filter out movies from list Watch Mode
   var action = "1,39,2,19,18,41,";
@@ -326,12 +328,17 @@ function getMovie() {
         var pick1 = result.original_name;
         var img = result.poster_path;
         console.log(pick);
-        $("#choice").text("Here's your movie choice  " + pick);
-        $("#choice2").text("Here's your TV choice  " + pick1);
-        $("#choice3").attr(
+        //IMAGE NOT DISPLAYING---------NEEDS DEBUGGED!!!!!!!!!!!
+        $("#media-image").attr(
           "src",
           "https://www.themoviedb.org/t/p/w600_and_h900_bestv2" + img
         );
+        if (pick1 === undefined) {
+          $("#tv-screen").text("Here's your movie choice:  " + pick);
+        }
+        else if (pick === undefined) {
+         $("#tv-screen").text("Here's your TV choice:  " + pick1);
+        }
       });
   }
 }
