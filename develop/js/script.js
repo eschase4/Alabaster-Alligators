@@ -189,13 +189,21 @@ function quiz() {
         { text: "No", addGenre: "" },
       ],
     },
+    {
+      id: 18,
+      q: "",
+      a: [
+        { text: "", addGenre: "" },
+        { text: "", addGenre: "" },
+      ],
+    },
   ];
   askQuestion(Quiz);
 }
 
 function askQuestion(Quiz) {
   console.log("running the quiz again");
-  if (currentQuestion < 17) {
+  if (currentQuestion < 18) {
     $("#tv-screen").text(Quiz[currentQuestion].q);
     $("#yes").text("Yes");
     $("#no").text("No");
@@ -210,6 +218,11 @@ function askQuestion(Quiz) {
       console.log("no!");
     });
   } else {
+    $("#tv-screen").text("");
+    $("#yes").text("");
+    $("#yes").prop("disabled", true);
+    $("#no").text("");
+    $("#no").prop("disabled", true);
     getMovie();
   }
 }
@@ -301,8 +314,10 @@ function getMovie() {
       console.log(aNumber);
       var selection = data.titles[aNumber].tmdb_id;
       var type = data.titles[aNumber].tmdb_type;
+      var watch = data.titles[aNumber].id;
       console.log(selection);
       console.log(type);
+      localStorage.setItem("watchmodeId", watch);
       localStorage.setItem("movie", selection);
       localStorage.setItem("showType", type);
       yourChoice();
@@ -318,6 +333,7 @@ function getMovie() {
     var tmdb = `https://api.themoviedb.org/3/${urType}/${urPick}?api_key=${tmdbKey}&language=en-US`;
 
     console.log(tmdb);
+    details();
 
     fetch(tmdb)
       .then((info) => {
@@ -332,26 +348,31 @@ function getMovie() {
         var pick = result.title;
         var pick1 = result.original_name;
         var img = result.poster_path;
-        console.log(pick);
+        var synop = result.overview;
+
+        console.log(synop);
         //IMAGE NOT DISPLAYING---------NEEDS DEBUGGED!!!!!!!!!!!
-        $("#media-image").attr(
-          "src",
-          "https://www.themoviedb.org/t/p/w600_and_h900_bestv2" + img
-        );
+        // s
         if (pick1 === undefined) {
-          $("#tv-screen").text("Here's your movie choice:  " + pick);
+          $("#tv-screen")
+            .prepend(`<h2 id="urPick"> Here's your Movie choice: ${pick} </h2> \
+          <img id="media-image" src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2${img}" width="150px" height="150px" /> \
+          <p id="synopsis">${synop}</p>`);
         } else if (pick === undefined) {
-          $("#tv-screen").text("Here's your TV choice:  " + pick1);
+          $("#tv-screen")
+            .prepend(`<h2 id="urPick"> Here's your TV choice: ${pick1} </h2> \
+          <img id="media-image" src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2${img}" width="150px" height="150px" /> \
+          <p id="synopsis">${synop}</p>`);
         }
       });
   }
 }
 
 function details() {
-  var source = localStorage.getItem("movie");
+  var source = localStorage.getItem("watchmodeId");
   console.log(source);
   var secondCallKey = "GHWA9Jkmbwm8azDdX0w8d8YYB3Omku0yVowWVtgD";
-  var callDetail = `https://api.watchmode.com/v1/title/${3173903}/sources/?apiKey=${secondCallKey}&append_to_response=sources'`;
+  var callDetail = `https://api.watchmode.com/v1/title/${source}/sources/?apiKey=${secondCallKey}&append_to_response=sources'`;
 
   fetch(callDetail)
     .then((stuff) => {
@@ -363,6 +384,23 @@ function details() {
     })
     .then((things) => {
       console.log(things);
+      var link = things[0].web_url;
+      var name = things[0].name;
+      var acquire = things[0].type;
+
+      $("#tv-screen").append(`<a href="${link}">${name}</a>`);
+      console.log("youve appended!");
+
+      $("#tv-screen").append(
+        '<button id="check" class="button is-medium is-fullwidth">Are you happy with this choice?</button>'
+      );
+      $("#check").click(function (event) {
+        event.preventDefault();
+        $("#tv-screen").text("");
+        $("#yes").text("");
+        $("#no").text("");
+        getMovie();
+      });
     });
 }
 
