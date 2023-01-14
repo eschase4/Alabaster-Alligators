@@ -1,6 +1,22 @@
-
-
 // genres, length, format(tv/movie),
+var action = "1,39,2,19,18,41,";
+var history = "31,10,";
+var comedy = "4,";
+var docu = "6,36,";
+var reality = "34,28,22,23,26,35,";
+var sports = "29,";
+var family = "8,21,";
+var fantasy = "9,";
+var drama = "7,";
+var horror = "11,";
+var romance = "14,";
+var thriller = "17,13,5,";
+var animation = "3,";
+var anime = "33,";
+var supernatural = "37,";
+var music = "12,32,";
+var scifi = "40,15,";
+var soap = "25,";
 
 // draft short survey to determine which genre to select.
 
@@ -27,13 +43,13 @@ $("#start").click(function (event) {
 });
 
 function quiz() {
-  console.log("Quiztime")
+  console.log("Quiztime");
   const Quiz = [
     {
       id: 0,
       q: "Are you in the mood for something scary?",
       a: [
-        { text: "Yes", addGenre: "horror" },
+        { text: "Yes", addGenre: "11," },
         { text: "No", addGenre: "" },
       ],
     },
@@ -41,7 +57,7 @@ function quiz() {
       id: 1,
       q: "Do you want a little excitement?",
       a: [
-        { text: "Yes", addGenre: "action" },
+        { text: "Yes", addGenre: "1,39,2,19,18,41," },
         { text: "No", addGenre: "" },
       ],
     },
@@ -49,7 +65,7 @@ function quiz() {
       id: 2,
       q: "Do you want to explore the past?",
       a: [
-        { text: "Yes", addGenre: "history" },
+        { text: "Yes", addGenre: "31,10," },
         { text: "No", addGenre: "" },
       ],
     },
@@ -57,7 +73,7 @@ function quiz() {
       id: 3,
       q: "Do you want to laugh?",
       a: [
-        { text: "Yes", addGenre: "comedy" },
+        { text: "Yes", addGenre: "4," },
         { text: "No", addGenre: "" },
       ],
     },
@@ -65,7 +81,7 @@ function quiz() {
       id: 4,
       q: "Are you in the mood to learn?",
       a: [
-        { text: "Yes", addGenre: "docu" },
+        { text: "Yes", addGenre: "6,36," },
         { text: "No", addGenre: "" },
       ],
     },
@@ -73,7 +89,7 @@ function quiz() {
       id: 5,
       q: "Do you want to see the world a little bit closer?",
       a: [
-        { text: "Yes", addGenre: "reality" },
+        { text: "Yes", addGenre: "34,28,22,23,26,35," },
         { text: "No", addGenre: "" },
       ],
     },
@@ -81,7 +97,7 @@ function quiz() {
       id: 6,
       q: "Do you need inspiration?",
       a: [
-        { text: "Yes", addGenre: "sports" },
+        { text: "Yes", addGenre: "29," },
         { text: "No", addGenre: "" },
       ],
     },
@@ -89,7 +105,7 @@ function quiz() {
       id: 7,
       q: "Do you want/need something family friendly?",
       a: [
-        { text: "Yes", addGenre: "family" },
+        { text: "Yes", addGenre: "8,21," },
         { text: "No", addGenre: "" },
       ],
     },
@@ -97,7 +113,7 @@ function quiz() {
       id: 8,
       q: "Elves?",
       a: [
-        { text: "Yes", addGenre: "fantasy" },
+        { text: "Yes", addGenre: "9," },
         { text: "No", addGenre: "" },
       ],
     },
@@ -105,7 +121,7 @@ function quiz() {
       id: 9,
       q: "Are you ready to be on the edge of your seat?",
       a: [
-        { text: "Yes", addGenre: "thriller" },
+        { text: "Yes", addGenre: "17,13,5," },
         { text: "No", addGenre: "" },
       ],
     },
@@ -113,7 +129,7 @@ function quiz() {
       id: 10,
       q: "Are you ready for a roller-coaster of emotions?",
       a: [
-        { text: "Yes", addGenre: "drama" },
+        { text: "Yes", addGenre: "7," },
         { text: "No", addGenre: "" },
       ],
     },
@@ -121,7 +137,7 @@ function quiz() {
       id: 11,
       q: "Do you want something animated (japenese style)?",
       a: [
-        { text: "Yes", addGenre: "anime" },
+        { text: "Yes", addGenre: "33," },
         { text: "No", addGenre: "" },
       ],
     },
@@ -129,7 +145,7 @@ function quiz() {
       id: 12,
       q: "Do you want to have your heart strings tugged?",
       a: [
-        { text: "Yes", addGenre: "romance" },
+        { text: "Yes", addGenre: "14," },
         { text: "No", addGenre: "" },
       ],
     },
@@ -137,7 +153,7 @@ function quiz() {
       id: 13,
       q: "Are you ready to get spooked by spoopy ghosts?",
       a: [
-        { text: "Yes", addGenre: "supernatural" },
+        { text: "Yes", addGenre: "37," },
         { text: "No", addGenre: "" },
       ],
     },
@@ -145,7 +161,7 @@ function quiz() {
       id: 14,
       q: "Wanna sing and dance",
       a: [
-        { text: "Yes", addGenre: "music" },
+        { text: "Yes", addGenre: "12,32," },
         { text: "No", addGenre: "" },
       ],
     },
@@ -153,7 +169,7 @@ function quiz() {
       id: 15,
       q: "Want to watch a cheesy TV show?",
       a: [
-        { text: "Yes", addGenre: "soap" },
+        { text: "Yes", addGenre: "25," },
         { text: "No", addGenre: "" },
       ],
     },
@@ -161,7 +177,7 @@ function quiz() {
       id: 16,
       q: "Do you want to step outside of reality?",
       a: [
-        { text: "Yes", addGenre: "scifi" },
+        { text: "Yes", addGenre: "40,15," },
         { text: "No", addGenre: "" },
       ],
     },
@@ -169,97 +185,75 @@ function quiz() {
       id: 17,
       q: "Do you prefer drawings over people?",
       a: [
-        { text: "Yes", addGenre: "animation" },
+        { text: "Yes", addGenre: "3," },
         { text: "No", addGenre: "" },
       ],
     },
   ];
-  askQuestion(Quiz)
+  askQuestion(Quiz);
 }
 
 function askQuestion(Quiz) {
-  console.log("running the quiz again")
+  console.log("running the quiz again");
   if (currentQuestion < 17) {
-    $("#tv-screen").text(Quiz[currentQuestion].q)
-    $('#yes').text("Yes")
-    $('#no').text("No")
-    $("#yes").on('click', function () {
-      checkGenre(Quiz[currentQuestion].a[0])
-      console.log("yes!")
-      $("#tv-screen").text(Quiz[currentQuestion].q)
-    })
-    $("#no").on('click', function () {
-      checkGenre(Quiz[currentQuestion].a[1])
-      $("#tv-screen").text(Quiz[currentQuestion].q)
-      console.log("no!")
-    })
-  }
-  else {
-    getMovie()
+    $("#tv-screen").text(Quiz[currentQuestion].q);
+    $("#yes").text("Yes");
+    $("#no").text("No");
+    $("#yes").on("click", function () {
+      checkGenre(Quiz[currentQuestion].a[0]);
+      console.log("yes!");
+      $("#tv-screen").text(Quiz[currentQuestion].q);
+    });
+    $("#no").on("click", function () {
+      checkGenre(Quiz[currentQuestion].a[1]);
+      $("#tv-screen").text(Quiz[currentQuestion].q);
+      console.log("no!");
+    });
+  } else {
+    getMovie();
   }
 }
 
 function checkGenre(selectedOption) {
   console.log(selectedOption);
   console.log(typeof selectedOption);
-  $("#yes").off("click").one("click", function () {
-    console.log("hello")
-  })
-  $("#no").off("click").one("click", function () {
-    console.log("hello")
-  })
+  $("#yes")
+    .off("click")
+    .one("click", function () {
+      console.log("hello");
+    });
+  $("#no")
+    .off("click")
+    .one("click", function () {
+      console.log("hello");
+    });
 
   if (selectedOption.text === "Yes") {
-    console.log("Valid Yes Input")
-    selectedGenre.push(selectedOption.addGenre)
-    console.log(selectedGenre)
-    localStorage.setItem("selectedGenre", JSON.stringify(selectedGenre))
+    console.log("Valid Yes Input");
+    selectedGenre.push(selectedOption.addGenre);
+    console.log(selectedGenre);
+    localStorage.setItem("selectedGenre", JSON.stringify(selectedGenre));
+  } else {
+    console.log("Valid No Input");
+    console.log(selectedGenre);
   }
-  else {
-    console.log("Valid No Input")
-    console.log(selectedGenre)
-  }
-  currentQuestion++
-  quiz()
+  currentQuestion++;
+  quiz();
 }
 
-//
-// }
-// Horror: Dark places and unexplained things like forests, graveyards, castles, abandoned structures or buildings, locked doors to remove rooms, blood, gore, or killing instruments.
-// Sci-Fi: Outer space or futuristic items like spaceships or laser guns
-// Sports: Sports arenas, teams, athletes, and sports equipment
-// War: Different vehicles such as tanks, planes, or realistic battlefields
-// Westerns: Cattle, stage coaches, saloons, ten-gallon hats, the frontier, or revolvers
-// Crime: Detectives, gangsters, criminals, fugitives, or inmates
-// Action: Chase sequences, extended fight scenes, guns, races against time
-// Comedy: Slapstick humor, witty dialogue, rites of passage, gross-out humor, fish-out-of-water, cross-dressing, mistaken identity
-// Drama: a self-sacrificial maternal figure
-// Musicals: singing and dancing
-// Romance: different stages of “falling in love” with a subsequent break-up and reconciliation, true love, fairy tales, forbidden love
-// Mystery
 function getMovie() {
-  console.log("Get Movie!")
+  console.log("Get Movie!");
   // Watch Mode list titles api call to filter out movies from list Watch Mode
-  var action = "1,39,2,19,18,41,";
-  var history = "31,10,";
-  var comedy = "4,";
-  var docu = "6,36,";
-  var reality = "34,28,22,23,26,35,";
-  var sports = "29,";
-  var family = "8,21,";
-  var fantasy = "9,";
-  var drama = "7,";
-  var horror = "11,";
-  var romance = "14,";
-  var thriller = "17,13,5,";
-  var animation = "3,";
-  var anime = "33,";
-  var supernatural = "37,";
-  var music = "12,32,";
-  var scifi = "40,15,";
-  var soap = "25,";
+
   var movie = "movie";
   var tv = "tv_series";
+
+  var urGenre = localStorage.getItem("selectedGenre");
+  var result = JSON.parse(urGenre);
+  console.log(result);
+  var addGenre = result.toString();
+  console.log(addGenre);
+
   // Need to create algorithm or survey to choose which queries to put in our api Call.
   // *content type (movie/tvSeries) must match query type. i.e(soap type = tv)
 
@@ -272,9 +266,10 @@ function getMovie() {
 
   var movie = "movie";
   var tv = "tv_series";
-  // var container = addGenre;
+  //
+  // var container =
   var watchKey = "GHWA9Jkmbwm8azDdX0w8d8YYB3Omku0yVowWVtgD";
-  var watchMode = `https://api.watchmode.com/v1/list-titles/?apiKey=${watchKey}&source_ids=&genres=${action}&types=${movie}}`;
+  var watchMode = `https://api.watchmode.com/v1/list-titles/?apiKey=${watchKey}&source_ids=&genres=${addGenre}&types=${movie}}`;
   console.log(watchMode);
   // Use a fetch call to get data from first api and return data we will use to find a movie for the User
   fetch(watchMode)
