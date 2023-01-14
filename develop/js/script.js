@@ -355,14 +355,14 @@ function getMovie() {
         // s
         if (pick1 === undefined) {
           $("#tv-screen")
-            .prepend(`<h2 id="urPick"> Here's your Movie choice: ${pick} </h2> \
+            .prepend(`<h2 class="is-size-2 has-text-weight-bold has-text-primary-light"> Here's your Movie choice: ${pick} </h2> \
           <img id="media-image" src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2${img}" width="150px" height="150px" /> \
           <p id="synopsis">${synop}</p>`);
         } else if (pick === undefined) {
           $("#tv-screen")
-            .prepend(`<h2 id="urPick"> Here's your TV choice: ${pick1} </h2> \
+            .prepend(`<h2 class="is-size-2 has-text-weight-bold has-text-primary-light"> Here's your TV choice: ${pick1} </h2> \
           <img id="media-image" src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2${img}" width="150px" height="150px" /> \
-          <p id="synopsis">${synop}</p>`);
+          <p class="mt-6 is-size-4 has-text-primary-light">${synop}</p>`);
         }
       });
   }
@@ -388,11 +388,11 @@ function details() {
       var name = things[0].name;
       var acquire = things[0].type;
 
-      $("#tv-screen").append(`<a href="${link}">${name}</a>`);
+      $("#tv-screen").append(`<a class="mt-3" href="${link}">${name} </a>`);
       console.log("youve appended!");
 
       $("#tv-screen").append(
-        '<button id="check" class="button is-medium is-fullwidth">Are you happy with this choice?</button>'
+        '<button id="check" class="button is-medium mt-3 is-fullwidth">Not in the mood for this title? Get another suggestion!</button>'
       );
       $("#check").click(function (event) {
         event.preventDefault();
