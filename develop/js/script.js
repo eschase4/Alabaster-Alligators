@@ -351,18 +351,16 @@ function getMovie() {
         var synop = result.overview;
 
         console.log(synop);
-        //IMAGE NOT DISPLAYING---------NEEDS DEBUGGED!!!!!!!!!!!
-        // s
         if (pick1 === undefined) {
           $("#tv-screen")
-            .prepend(`<h2 class="is-size-2 has-text-weight-bold has-text-primary-light"> Here's your Movie choice: ${pick} </h2> \
+            .prepend(`<h2 class="has-text-weight-bold has-text-primary-light" id="urPick"> Here's your Movie choice: ${pick} </h2> \
           <img id="media-image" src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2${img}" width="150px" height="150px" /> \
           <p id="synopsis">${synop}</p>`);
         } else if (pick === undefined) {
           $("#tv-screen")
-            .prepend(`<h2 class="is-size-2 has-text-weight-bold has-text-primary-light"> Here's your TV choice: ${pick1} </h2> \
-          <img id="media-image" src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2${img}" width="150px" height="150px" /> \
-          <p class="mt-6 is-size-4 has-text-primary-light">${synop}</p>`);
+            .prepend(`<h2 class="has-text-weight-bold has-text-primary-light" id="urPick"> Here's your TV choice: ${pick1} </h2> \
+          <img id="media-image" src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2${img}"/> \
+          <p class="mt-6 has-text-primary-light" id="synopsis">${synop}</p>`);
         }
       });
   }
