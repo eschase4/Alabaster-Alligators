@@ -33,11 +33,16 @@
 #tv-set {
   background-color: saddlebrown;
   min-height: 80vh;
+  max-height: 80vh;
   max-width: 125vh;
+  max-width: 125vh
 }
 
 #tv-screen {
   min-width: 80vh;
+  max-width: 80vh;
+  min-height: 60vh;
+  max-height: 60vh;
   border-radius: 30px;
   font-size: 40px;
 }
@@ -61,11 +66,11 @@
 }
 
 #urPick {
-  font-size: 2.5rem;
+  font-size: 20px;
 }
 
 #synopsis {
-  font-size: 1.5rem;
+  font-size: 15px;
 }
 
 #media-image {
@@ -74,6 +79,10 @@
   border: solid white 3px;
   width: 100px;
   height: 150px;
+}
+
+#check {
+  font-size: 20px;
 }
 
 @media only screen and (max-width: 992px) {
@@ -129,9 +138,9 @@
 
   #tv-set {
     min-height: 68vh;
-    min-width: 84vh;
+    min-width: 75vh;
     max-height: 68vh;
-    max-width: 84vh;
+    max-width: 75vh;
   }
 
   #tv-screen {
@@ -176,9 +185,9 @@
 
   #tv-set {
     min-height: 65vh;
-    min-width: 70vh;
-    max-width: 70vh;
-    max-height: 65vh;
+    min-width: 68vh;
+    max-width: 75vh;
+    max-height: 68vh;
   }
 
   #tv-screen {
