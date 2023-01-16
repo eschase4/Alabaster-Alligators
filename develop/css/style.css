@@ -97,10 +97,10 @@
   }
 
   #tv-screen {
-    min-height: 60vh;
-    min-width: 70vh;
-    max-width: 70vh;
-    max-height: 60vh;
+    min-height: 43vh;
+    min-width: 50vh;
+    max-width: 50vh;
+    max-height: 43vh;
     font-size: 20px;
   }
 
@@ -184,17 +184,17 @@
   }
 
   #tv-set {
-    min-height: 65vh;
+    min-height: 55vh;
     min-width: 68vh;
-    max-width: 75vh;
-    max-height: 68vh;
+    max-width: 68vh;
+    max-height: 55vh;
   }
 
   #tv-screen {
-    min-height: 45vh;
-    min-width: 40vh;
-    max-height: 45vh;
-    max-width: 40vh;
+    min-height: 40vh;
+    min-width: 43vh;
+    max-height: 40vh;
+    max-width: 43vh;
     font-size: 15px;
   }
 
