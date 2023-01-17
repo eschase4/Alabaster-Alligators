@@ -362,13 +362,13 @@ function getMovie() {
         if (pick1 === undefined) {
           $("#tv-screen")
             .prepend(`<h2 class="has-text-weight-bold has-text-primary-light" id="urPick"> Here's your Movie choice: ${pick} </h2> \
-          <img id="media-image" src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2${img}" width="150px" height="150px" /> \
-          <p id="synopsis">${synop}</p>`);
+            <div class="media-container"><img id="media-image" src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2${img}"/> \
+            <div class="middle"><div class="synopsis">${synop}</div></div>`);
         } else if (pick === undefined) {
           $("#tv-screen")
             .prepend(`<h2 class="has-text-weight-bold has-text-primary-light" id="urPick"> Here's your TV choice: ${pick1} </h2> \
-          <img id="media-image" src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2${img}"/> \
-          <p class="mt-6 has-text-primary-light" id="synopsis">${synop}</p>`);
+          <div class="media-container"><img id="media-image" src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2${img}"/> \
+          <div class="middle"><div class="synopsis">${synop}</div></div>`);
         }
       });
   }
@@ -394,11 +394,11 @@ function details() {
       var name = things[0].name;
       var acquire = things[0].type;
 
-      $("#tv-screen").append(`<a class="mt-3" href="${link}">${name} </a>`);
+      $("#tv-screen").append(`<a href="${link}">${name} </a>`);
       console.log("youve appended!");
 
       $("#tv-screen").append(
-        '<button id="check" class="button is-medium mt-3 is-fullwidth">Not in the mood for this title? Get another suggestion!</button>'
+        '<button id="check" class="button is-medium mt-3">Not in the mood for this title? Get another suggestion!</button>'
       );
       $("#check").click(function (event) {
         event.preventDefault();
@@ -415,6 +415,7 @@ $(document).ready(function () {
   var getPosters = JSON.parse(localStorage.getItem("posterArr"))
   if (getPosters) {
     posterArr = getPosters;
+    $("#previous-rec").attr("style","visibility: visible")
     for (var i = 0; i < getPosters.length; i++) {
       $("#posters").after(`<img id= "moviePosters" src ="${getPosters[i]}">`);
     }
