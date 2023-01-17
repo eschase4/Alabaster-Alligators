@@ -17,6 +17,11 @@ var supernatural = "37,";
 var music = "12,32,";
 var scifi = "40,15,";
 var soap = "25,";
+var posterArr = [];
+console.log(posterArr)
+
+
+
 
 // draft short survey to determine which genre to select.
 
@@ -350,6 +355,9 @@ function getMovie() {
         var img = result.poster_path;
         var synop = result.overview;
 
+        posterArr.push(`https://www.themoviedb.org/t/p/w600_and_h900_bestv2${img}`)
+        localStorage.setItem("posterArr", JSON.stringify(posterArr))
+
         console.log(synop);
         if (pick1 === undefined) {
           $("#tv-screen")
@@ -401,6 +409,17 @@ function details() {
       });
     });
 }
+
+
+$(document).ready(function () {
+  var getPosters = JSON.parse(localStorage.getItem("posterArr"))
+  if (getPosters) {
+    posterArr = getPosters;
+    for (var i = 0; i < getPosters.length; i++) {
+      $("#posters").after(`<img id= "moviePosters" src ="${getPosters[i]}">`);
+    }
+  }
+});
 
 // Do you want to watch something Cheesy
 // Are you in a mood to laugh
