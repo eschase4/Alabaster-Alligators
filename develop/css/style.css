@@ -66,7 +66,7 @@
 }
 
 #urPick {
-  font-size: 20px;
+  font-size: 5vh;
 }
 
 #synopsis {
@@ -111,7 +111,7 @@
   }
 
   #urPick {
-    font-size: 20px;
+    /* font-size: 20px; */
   }
 
   #synopsis {
@@ -159,7 +159,7 @@
   }
 
   #urPick {
-    font-size: 20px;
+    /* font-size: 20px; */
   }
 
   #synopsis {
@@ -205,7 +205,7 @@
   }
 
   #urPick {
-    font-size: 12px;
+    /* font-size: 12px; */
   }
 
   #synopsis {
