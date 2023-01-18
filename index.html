@@ -14,12 +14,23 @@
 </head>
 
 <body>
-  <section class="section is-flex  p-0 mb-0" id="title-container">
+  <section class="section is-flex  is-justify-content-space-between p-0 mb-0" id="title-container">
     <img src="./develop/images/alabaster-alligator-logo.png" id="alabster-alligator">
-    <h2 class="subtitle has-text-white">What Should I Watch?</h1>
+    <div class="is-flex is-flex-direction-column is-align-items-center">
+    <h2 class="subtitle has-text-white">What Should I Watch?</h2>
+    <div>
       <h1 class="title is-size-1">
         Ask Alabaster Alligator
-    </h2>
+    </h1>
+    </div>
+  </div>
+  <div class="has-text-white is-flex is-align-items-center">
+    <ul class="links is-size-4 has-text-weight-bold pr-1">
+      <li><a href="#tv-screen">Get random title</a></li>
+      <li><a href="#previous-rec">Previously recommended</a></li>
+      <li><a href="#footer">Data Sources</a></li>
+    </ul>
+  </div>
   </section>
 
 
@@ -37,12 +48,10 @@
         <div
           class="column is-flex is-flex-direction-column is-justify-content-center is-align-items-center has-background-black m-6 p-6 has-text-weight-bold has-text-warning-light is-one-half"
           id="tv-screen">
-
-          Do you need something to watch? Are you stuck endlessly scrolling
+           Do you need something to watch? Are you stuck endlessly scrolling
           through titles to find the perfect entertainment for you mood? Take
           the quiz to find out EXACTLY what you should watch!
-
-
+         
 
 
           <button class="mt-6" id="start">Tap here to start!</button>
@@ -50,7 +59,7 @@
       </div>
     </div>
   </div>
-  <div>
+  <div id="previous-rec-container">
     <h2 id="previous-rec">Previously recommended titles:</h2>
   </div>
   <div class="table-container mb-0">
@@ -63,9 +72,9 @@
   <p id="choice2"></p>
   <img id="choice3" src="" width="100px" height="100px" /> -->
   <footer class="footer" id="footer">
-    <div class="content has-text-centered">
+    <div class="content has-text-centered p-6 is-size-2">
       <p>
-        <strong>Movie and tv show data provided</strong> by
+        <strong>Movie and tv show data provided by</strong> 
         <img src="./develop/images/TMDB-logo.svg"
           href="https://developers.themoviedb.org/3/getting-started/introduction" id="TMDB" /><strong>and</strong>
         <img src="./develop/images/watchmode-logo.png" href="https://api.watchmode.com/" id="watchmode" />
