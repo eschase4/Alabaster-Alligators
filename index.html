@@ -1,91 +1,119 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Added Bulma Style sheet for framework requirement -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"
+    />
+    <!-- Added reset file to make sure project appearance is uniform between browsers -->
+    <link rel="stylesheet" href="./develop/css/reset.css" />
+    <link rel="stylesheet" href="./develop/css/style.css" />
+    <!-- added Fontawesome to add styling to project -->
+    <script
+      src="https://kit.fontawesome.com/7c9d2b2756.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Alabaster-Alligator Movie Selector</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css" />
-  <link rel="stylesheet" href="./develop/css/reset.css" />
-  <link rel="stylesheet" href="./develop/css/style.css" />
-
-  <script src="https://kit.fontawesome.com/7c9d2b2756.js" crossorigin="anonymous"></script>
-  <title>What to Watch</title>
-</head>
-
-<body>
-  <section class="section is-flex  is-justify-content-space-between p-0 mb-0" id="title-container">
-    <img src="./develop/images/alabaster-alligator-logo.png" id="alabster-alligator">
-    <div class="is-flex is-flex-direction-column is-align-items-center">
-    <h2 class="subtitle has-text-white">What Should I Watch?</h2>
-    <div>
-      <h1 class="title is-size-1">
-        Ask Alabaster Alligator
-    </h1>
-    </div>
-  </div>
-  <div class="has-text-white is-flex is-align-items-center">
-    <ul class="links is-size-4 has-text-weight-bold pr-1">
-      <li><a href="#tv-screen">Get random title</a></li>
-      <li><a href="#previous-rec">Previously recommended</a></li>
-      <li><a href="#footer">Data Sources</a></li>
-    </ul>
-  </div>
-  </section>
-
-
-  <div class="container is-fluid" id="main-container">
-    <div class="container is-flex is-flex-direction-column is-align-items-center is-fluid p-6">
-      <div id="diagonal-line-left"></div>
-      <div id="diagonal-line-right"></div>
-      <div class="container is-flex is-justify-content-space-evenly m-6 p-6" id="tv-set">
-        <div
-          class="column is-flex is-flex-direction-column is-align-items-center is-justify-content-space-evenly is-one-quarter"
-          id="side-tv">
-          <button class="answer-btn is-size-1 is-italic has-background-grey" id="yes"></button>
-          <button class="answer-btn is-size-1 is-italic has-background-grey" id="no"></button>
+  <body>
+    <!-- added bulma Section to add styling and format for HTML elements and Css -->
+    <section
+      class="section is-flex is-justify-content-space-between p-0 mb-0"
+      id="title-container"
+    >
+      <img
+        src="./develop/images/alabaster-alligator-logo.png"
+        id="alabster-alligator"
+      />
+      <div class="is-flex is-flex-direction-column is-align-items-center">
+        <h2 class="subtitle has-text-white">What Should I Watch?</h2>
+        <div>
+          <h1 class="title is-size-1">Ask Alabaster Alligator</h1>
         </div>
+      </div>
+      <!-- added href links to allow navigation around the page -->
+      <div class="has-text-white is-flex is-align-items-center">
+        <ul class="links is-size-4 has-text-weight-bold pr-1">
+          <li><a href="#tv-screen">Get random title</a></li>
+          <li><a href="#previous-rec">Previously recommended</a></li>
+          <li><a href="#footer">Data Sources</a></li>
+        </ul>
+      </div>
+    </section>
+    <!-- main container added to house the tv and the contents of the project -->
+    <div class="container is-fluid" id="main-container">
+      <div
+        class="container is-flex is-flex-direction-column is-align-items-center is-fluid p-6"
+      >
+        <div id="diagonal-line-left"></div>
+        <div id="diagonal-line-right"></div>
         <div
-          class="column is-flex is-flex-direction-column is-justify-content-center is-align-items-center has-background-black m-6 p-6 has-text-weight-bold has-text-warning-light is-one-half"
-          id="tv-screen">
-           Do you need something to watch? Are you stuck endlessly scrolling
-          through titles to find the perfect entertainment for you mood? Take
-          the quiz to find out EXACTLY what you should watch!
-         
+          class="container is-flex is-justify-content-space-evenly m-6 p-6"
+          id="tv-set"
+        >
+          <div
+            class="column is-flex is-flex-direction-column is-align-items-center is-justify-content-space-evenly is-one-quarter"
+            id="side-tv"
+          >
+            <button
+              class="answer-btn is-size-1 is-italic has-background-grey"
+              id="yes"
+            ></button>
+            <button
+              class="answer-btn is-size-1 is-italic has-background-grey"
+              id="no"
+            ></button>
+          </div>
+          <div
+            class="column is-flex is-flex-direction-column is-justify-content-center is-align-items-center has-background-black m-6 p-6 has-text-weight-bold has-text-warning-light is-one-half"
+            id="tv-screen"
+          >
+            Do you need something to watch? Are you stuck endlessly scrolling
+            through titles to find the perfect entertainment for you mood? Take
+            the quiz to find out EXACTLY what you should watch!
 
-
-          <button class="mt-6" id="start">Tap here to start!</button>
+            <button class="mt-6" id="start">Tap here to start!</button>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-  <div id="previous-rec-container">
-    <h2 id="previous-rec">Previously recommended titles:</h2>
-  </div>
-  <div class="table-container mb-0">
-    <table class="table is-fullwidth is-scrollable" id="posters">
-
-    </table>
-  </div>
-  <!-- <button id="movie">Get A Movie</button>
-  <p id="choice"></p>
-  <p id="choice2"></p>
-  <img id="choice3" src="" width="100px" height="100px" /> -->
-  <footer class="footer" id="footer">
-    <div class="content has-text-centered p-6 is-size-2">
-      <p>
-        <strong>Movie and tv show data provided by</strong> 
-        <img src="./develop/images/TMDB-logo.svg"
-          href="https://developers.themoviedb.org/3/getting-started/introduction" id="TMDB" /><strong>and</strong>
-        <img src="./develop/images/watchmode-logo.png" href="https://api.watchmode.com/" id="watchmode" />
-      </p>
+    <!-- added section to contain the previously completed survey results -->
+    <div id="previous-rec-container">
+      <h2 id="previous-rec">Previously recommended titles:</h2>
     </div>
-  </footer>
-  <script src="https://code.jquery.com/jquery-3.6.3.min.js"
-    integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous">
-    </script>
+    <div class="table-container mb-0">
+      <table class="table is-fullwidth is-scrollable" id="posters"></table>
+    </div>
+    <!-- added footer information to credit the apis we used -->
+    <footer class="footer" id="footer">
+      <div class="content has-text-centered p-6 is-size-2">
+        <p>
+          <strong>Movie and tv show data provided by</strong>
+          <img
+            src="./develop/images/TMDB-logo.svg"
+            href="https://developers.themoviedb.org/3/getting-started/introduction"
+            id="TMDB"
+          /><strong>and</strong>
+          <img
+            src="./develop/images/watchmode-logo.png"
+            href="https://api.watchmode.com/"
+            id="watchmode"
+          />
+        </p>
+      </div>
+      <!-- Jquery and Javascript tags added to provide dynamic functionality -->
+    </footer>
+    <script
+      src="https://code.jquery.com/jquery-3.6.3.min.js"
+      integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU="
+      crossorigin="anonymous"
+    ></script>
 
-  <script src="./develop/js/script.js"></script>
-</body>
-
+    <script src="./develop/js/script.js"></script>
+  </body>
 </html>
