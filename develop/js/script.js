@@ -224,7 +224,7 @@ function getMovie() {
   var addGenre = result.toString();
   var movie = "movie";
 
-  var watchKey = "GHWA9Jkmbwm8azDdX0w8d8YYB3Omku0yVowWVtgD";
+  var watchKey = "tJempqsMTEXF2tuB1W3BTsyvau00m1fqLSSEAOZR";
   var watchMode = `https://api.watchmode.com/v1/list-titles/?apiKey=${watchKey}&source_ids=&genres=${addGenre}&types=${movie}}`;
 
   // Use a fetch call to get data from first api and return data we will use to find a movie for the User
@@ -258,7 +258,7 @@ function getMovie() {
 
     var urType = localStorage.getItem("showType");
 
-    var tmdbKey = "df5b060aa473758dc356cd7a2a5312f4";
+    var tmdbKey = "fbfbebf073359e7780f0e8d9441107ff";
 
     var tmdb = `https://api.themoviedb.org/3/${urType}/${urPick}?api_key=${tmdbKey}&language=en-US`;
 
@@ -302,7 +302,7 @@ function details() {
   // added function to make a callback and retrieve the details of the original movie
   var source = localStorage.getItem("watchmodeId");
 
-  var secondCallKey = "GHWA9Jkmbwm8azDdX0w8d8YYB3Omku0yVowWVtgD";
+  var secondCallKey = "tJempqsMTEXF2tuB1W3BTsyvau00m1fqLSSEAOZR";
   var callDetail = `https://api.watchmode.com/v1/title/${source}/sources/?apiKey=${secondCallKey}&append_to_response=sources'`;
 
   fetch(callDetail)
