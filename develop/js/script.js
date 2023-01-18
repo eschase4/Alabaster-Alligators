@@ -18,24 +18,8 @@ var music = "12,32,";
 var scifi = "40,15,";
 var soap = "25,";
 var posterArr = [];
-console.log(posterArr)
+console.log(posterArr);
 
-
-
-
-// draft short survey to determine which genre to select.
-
-// API 1 watch mode, input genre to get a result of  Movies, randomly grab a movie from results
-
-// API 2 OMDB, input randomly selected movie to get Plot and score.
-
-// if user has seen movie we re-run function to get another random movie
-// $("#movie").click(function get(event) {
-//   event.preventDefault();
-//   console.log("you are searching for a movie!");
-//   getMovie();
-// });
-console.log("this works!");
 const selectedGenre = [];
 var currentQuestion = 0;
 
@@ -355,8 +339,10 @@ function getMovie() {
         var img = result.poster_path;
         var synop = result.overview;
 
-        posterArr.push(`https://www.themoviedb.org/t/p/w600_and_h900_bestv2${img}`)
-        localStorage.setItem("posterArr", JSON.stringify(posterArr))
+        posterArr.push(
+          `https://www.themoviedb.org/t/p/w600_and_h900_bestv2${img}`
+        );
+        localStorage.setItem("posterArr", JSON.stringify(posterArr));
 
         console.log(synop);
         if (pick1 === undefined) {
@@ -410,9 +396,8 @@ function details() {
     });
 }
 
-
 $(document).ready(function () {
-  var getPosters = JSON.parse(localStorage.getItem("posterArr"))
+  var getPosters = JSON.parse(localStorage.getItem("posterArr"));
   if (getPosters) {
     posterArr = getPosters;
     for (var i = 0; i < getPosters.length; i++) {
