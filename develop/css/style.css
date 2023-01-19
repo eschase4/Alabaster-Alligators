@@ -60,6 +60,7 @@ a {
   font-size: 30px;
 }
 
+
 #previous-rec {
   visibility: hidden;
   font-size: 24px;
@@ -177,7 +178,7 @@ a {
     min-width: 73vh;
     max-width: 73vh;
     max-height: 54vh;
-    font-size: 20px;
+    font-size: 28px;
   }
 
   .answer-btn {
@@ -202,23 +203,23 @@ a {
   }
 
   #tv-set {
-    min-height: 68vh;
-    min-width: 89vh;
-    max-height: 68vh;
-    max-width: 89vh;
+    min-height: 50vh;
+    min-width: 64vh;
+    max-height: 50vh;
+    max-width: 64vh;
   }
 
   #tv-screen {
-    min-height: 44vh;
-    min-width: 56vh;
-    max-height: 44vh;
-    max-width: 56vh;
-    font-size: 25px;
+    min-height: 34vh;
+    min-width: 42vh;
+    max-height: 34vh;
+    max-width: 42vh;
+    font-size: 20px;
   }
 
   .answer-btn {
-    height: 100px;
-    width: 95px;
+    height: 80px;
+    width: 75px;
     border-radius: 50%;
   }
 
@@ -238,23 +239,23 @@ a {
   }
 
   #tv-set {
-    min-height: 59vh;
-    min-width: 68vh;
-    max-width: 68vh;
-    max-height: 59vh;
+    min-height: 41vh;
+    min-width: 47vh;
+    max-width: 47vh;
+    max-height: 41vh;
   }
 
   #tv-screen {
-    min-height: 36vh;
-    min-width: 43vh;
-    max-height: 36vh;
-    max-width: 43vh;
-    font-size: 15px;
+    min-height: 23vh;
+    min-width: 29vh;
+    max-height: 23vh;
+    max-width: 29vh;
+    font-size: 12px;
   }
 
   .answer-btn {
-    height: 82px;
-    width: 88px;
+    height: 49px;
+    width: 49px;
     border-radius: 50%;
   }
 
@@ -265,5 +266,13 @@ a {
   #check {
     font-size: 10px;
     width: 241px;
+  }
+
+  #watchmode {
+    max-width: 40%;
+  }
+
+  #TMDB {
+    max-width: 22%;
   }
 }
