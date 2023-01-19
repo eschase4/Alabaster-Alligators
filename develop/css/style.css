@@ -167,16 +167,16 @@ a {
   }
 
   #tv-set {
-    min-height: 81vh;
-    max-height: 81vh;
-    min-width: 111vh;
-    max-width: 111vh;
+    min-height: 73vh;
+    max-height: 73vh;
+    min-width: 96vh;
+    max-width: 96vh;
   }
 
   #tv-screen {
     min-height: 54vh;
-    min-width: 73vh;
-    max-width: 73vh;
+    min-width: 64vh;
+    max-width: 64vh;
     max-height: 54vh;
     font-size: 28px;
   }
@@ -240,8 +240,8 @@ a {
 
   #tv-set {
     min-height: 41vh;
-    min-width: 47vh;
-    max-width: 47vh;
+    min-width: 46vh;
+    max-width: 46vh;
     max-height: 41vh;
   }
 
