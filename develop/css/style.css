@@ -12,13 +12,16 @@
   width: 180px;
 }
 
-
 .links li {
   padding: 36px 7px;
 }
 
+#subtitle {
+  font-size: 5.25rem;
+}
+
 a {
-  color:blanchedalmond;
+  color: blanchedalmond;
 }
 
 #main-container {
@@ -68,8 +71,6 @@ a {
   background-color: #2d5040;
   display: flex;
   justify-content: center;
-
-
 }
 
 .answer-btn {
@@ -84,7 +85,7 @@ a {
 
 #TMDB {
   max-width: 7%;
-  margin:10px
+  margin: 10px;
 }
 
 #watchmode {
@@ -116,8 +117,6 @@ a {
   max-width: 25%;
 }
 
-
-
 .table-container {
   display: flex;
   background-color: blanchedalmond;
@@ -137,19 +136,17 @@ a {
   display: block;
   width: 100%;
   height: auto;
-  transition: .5s ease;
+  transition: 0.5s ease;
   backface-visibility: hidden;
 }
 
 .middle {
-  transition: .5s ease;
+  transition: 0.5s ease;
   opacity: 0;
   position: absolute;
   transform: translate(-30%, -130%);
   text-align: center;
 }
-
-
 
 .media-container:hover .middle {
   opacity: 1;
@@ -160,13 +157,12 @@ a {
   color: white;
   font-size: 16px;
   padding: 16px 32px;
-  width: 500px
+  width: 500px;
 }
 
 @media only screen and (min-width: 992px) {
   #title-container {
     flex-direction: row;
-    
   }
 
   #tv-set {
@@ -197,9 +193,7 @@ a {
   #check {
     font-size: 13px;
   }
-
 }
-
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   #title-container {
@@ -222,7 +216,6 @@ a {
     font-size: 25px;
   }
 
-
   .answer-btn {
     height: 100px;
     width: 95px;
@@ -232,7 +225,6 @@ a {
   #urPick {
     font-size: 20px;
   }
-
 
   #check {
     font-size: 13px;
@@ -259,7 +251,6 @@ a {
     max-width: 43vh;
     font-size: 15px;
   }
-
 
   .answer-btn {
     height: 82px;
