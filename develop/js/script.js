@@ -111,7 +111,7 @@ function quiz() {
     },
     {
       id: 13,
-      q: "Are you ready to get spooked by spoopy ghosts?",
+      q: "Do you want to get spooked by spoopy ghosts?",
       a: [
         { text: "Yes", addGenre: "37," },
         { text: "No", addGenre: "" },
@@ -119,7 +119,7 @@ function quiz() {
     },
     {
       id: 14,
-      q: "Wanna sing and dance",
+      q: "Wanna sing and dance?",
       a: [
         { text: "Yes", addGenre: "12,32," },
         { text: "No", addGenre: "" },
