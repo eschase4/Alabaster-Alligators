@@ -23,6 +23,7 @@ Code for this project can be found: https://github.com/eschase4/Alabaster-Alliga
 The deployed Website for this page can be found: https://eschase4.github.io/Alabaster-Alligators/
 
 #Screenshots
+![Alabaster Alligators Screenshot](./develop/images/webpage-screenshot.png)
 
 #License
 
